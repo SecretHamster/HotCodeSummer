@@ -1,0 +1,17 @@
+characters = {
+#Create country leader - The Summer King
+the_summer_king = {
+	name = the_summer_king
+	portraits = {
+		civilian = {
+			#Custom image for The Summer King
+			large = "/gfx/leaders/SRP/thMOxoZy-271645.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  the_sacred_king }
+	}
+}
+}

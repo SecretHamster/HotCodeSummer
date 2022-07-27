@@ -1,0 +1,771 @@
+focus_tree = {
+	id = srp
+	continuous_focus_position = { x = 340 y = 1700 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SRP
+		}
+	}
+	#The Cigar Exchange
+	focus = {
+		id = SRP_the_cigar_exchange
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_whyistherumgone  }
+		completion_reward = {
+			add_ideas = {
+			    CoS_The_Cigar_Exchange
+			}
+		}
+	}
+
+	#Power to the summer king
+	focus = {
+		id = SRP_power_to_the_summer_king
+		icon = GFX_focus_attack_switzerland
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SRP_call_the_summer_court  }
+		completion_reward = {
+			add_ideas = {
+			CoS_Court_of_Summer
+			}
+			
+			
+		}
+	}
+
+	#Why is the rum gone?
+	focus = {
+		id = SRP_whyistherumgone
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_the_punchbowl  }
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = CUB
+			}
+			
+			
+			
+		}
+	}
+
+	#Secure the Sea
+	focus = {
+		id = SRP_secure_the_sea
+		icon = GFX_SRP_secure_the_sea-70
+		x = 1
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_the_tricorn_crown  } prerequisite = { focus = SRP_tequila_sunrise  }
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = ENG
+			}
+			
+			
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = HAI
+			}
+			
+			
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = DOM
+			}
+			
+			
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = FRA
+			}
+			
+			
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = HOL
+			}
+			
+			
+			
+		}
+	}
+
+	#The Tricorn Crown
+	focus = {
+		id = SRP_the_tricorn_crown
+		icon = GFX_focus_mex_support_general_cedillo
+		x = 2
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = SRP_the_cigar_exchange  }
+		completion_reward = {
+			add_ideas = {
+			    CoS_Tricorn_Crown
+			}
+		}
+	}
+
+	#Tequila Sunrise
+	focus = {
+		id = SRP_tequila_sunrise
+		icon = GFX_SRP_tequila_sunrise-270
+		x = 0
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = SRP_tequila_slammer  }
+		completion_reward = {
+			add_state_core = 315
+			add_state_core = 474
+			add_state_core = 475
+			add_state_core = 476
+			add_state_core = 477
+			add_state_core = 485
+			add_state_core = 277
+			add_state_core = 478
+			add_state_core = 479
+			add_state_core = 481
+			add_state_core = 480
+			add_state_core = 482
+			add_state_core = 483
+			add_state_core = 484
+		}
+	}
+
+	#Storm the Sunshine state
+	focus = {
+		id = SRP_storm_the_sunshine_state
+		icon = GFX_goal_generic_attack_allies
+		x = 3
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_power_to_the_summer_king  }
+		completion_reward = {
+			set_state_owner = 366
+			set_state_controller = 366
+			add_state_core = 366
+			
+		}
+	}
+
+	#Spring Break
+	focus = {
+		id = SRP_spring_break
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 1
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SRP_power_to_the_summer_king  }
+		completion_reward = {
+			add_manpower = 100000
+			
+			add_ideas = {
+			CoS_Spring_Break
+			}
+		}
+	}
+
+	#The Punchbowl
+	focus = {
+		id = SRP_the_punchbowl
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_spring_break  } prerequisite = { focus = SRP_storm_the_sunshine_state  }
+		completion_reward = {
+			random_owned_controlled_state = {
+			limit = {
+			free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+			}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+			}
+			set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+			}
+			
+			
+		}
+	}
+
+	#Call the summer court
+	focus = {
+		id = SRP_call_the_summer_court
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 75
+			
+			
+		}
+	}
+
+	#Tequila Slammer
+	focus = {
+		id = SRP_tequila_slammer
+		icon = GFX_focus_attack_mexico
+		x = 0
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_whyistherumgone  }
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = MEX
+			}
+			
+			
+			
+		}
+	}
+
+	#A Democracy in the sun
+	focus = {
+		id = SRP_a_democracy_in_the_sun
+		icon = GFX_goal_unknown
+		x = 12
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SRP_call_the_summer_court  }
+	}
+
+	#The Sea of Summer
+	focus = {
+		id = SRP_the_sea_of_summer
+		icon = GFX_focus_eng_decolonization
+		x = 1
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = SRP_secure_the_sea  }
+		completion_reward = {
+			add_state_core = 693
+			add_state_core = 318
+			add_state_core = 319
+			add_state_core = 689
+			add_state_core = 686
+			add_state_core = 694
+			add_state_core = 308
+			add_state_core = 692
+			add_state_core = 691
+			add_state_core = 695
+			add_state_core = 696
+		}
+	}
+
+	#The Final Banquet
+	focus = {
+		id = SRP_the_final_banquet
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 1
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_the_sea_of_summer  }
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_wargoal_focus
+			    target = USA
+			}
+			
+			
+			
+		}
+	}
+
+	#A New Flagship
+	focus = {
+		id = SRP_a_new_flagship
+		icon = GFX_goal_unknown
+		x = 3
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = SRP_the_tricorn_crown  focus = SRP_the_red_cutlass  }
+	}
+
+	#The Party Animals
+	focus = {
+		id = SRP_the_party_animals
+		icon = GFX_goal_unknown
+		x = 3
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SRP_a_new_flagship  }
+	}
+
+	#The Fun Never Stops
+	focus = {
+		id = SRP_the_fun_never_stops
+		icon = GFX_goal_unknown
+		x = 3
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SRP_the_party_animals  }
+	}
+
+	#Summer of the Century
+	focus = {
+		id = SRP_summer_of_the_century
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 5
+		y = 12
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_the_final_banquet  } prerequisite = { focus = SRP_the_fun_never_stops  focus = SRP_the_winter_of_our_discontent  } prerequisite = { focus = SRP_the_fun_never_stops  }
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = USA
+			}
+			
+			
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ENG
+			}
+			
+			
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = JAP
+			}
+			
+			
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = GER
+			}
+			
+			
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SOV
+			}
+			
+			
+			
+		}
+	}
+
+	#Mutiny!
+	focus = {
+		id = SRP_mutiny
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SRP_call_the_summer_court  }
+	}
+
+	#A Party  for everyone
+	focus = {
+		id = SRP_apartyforeveryone
+		icon = GFX_goal_unknown
+		x = 9
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SRP_call_the_summer_court  }
+	}
+
+	#International Tax Haven
+	focus = {
+		id = SRP_international_tax_haven
+		icon = GFX_goal_unknown
+		x = 21
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_the_summer_palace  }
+	}
+
+	#Call of the Black Flag
+	focus = {
+		id = SRP_call_of_the_black_flag
+		icon = GFX_goal_unknown
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_mutiny  }
+	}
+
+	#Form the Buccaneers!
+	focus = {
+		id = SRP_formthebuccaneers
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SRP_call_of_the_black_flag  }
+	}
+
+	#Gin, Tonic & Deck Chairs
+	focus = {
+		id = SRP_gintonicdeckchairs
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SRP_formthebuccaneers  }
+	}
+
+	#Cold Water Prince
+	focus = {
+		id = SRP_cold_water_prince
+		icon = GFX_goal_unknown
+		x = 7
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_gintonicdeckchairs  }
+	}
+
+	#Cold Water Capital
+	focus = {
+		id = SRP_cold_water_capital
+		icon = GFX_goal_unknown
+		x = 7
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = SRP_cold_water_prince  }
+	}
+
+	#The Winter of Our Discontent
+	focus = {
+		id = SRP_the_winter_of_our_discontent
+		icon = GFX_goal_unknown
+		x = 7
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = SRP_cold_water_capital  }
+	}
+
+	#Call to the Jan Mayen
+	focus = {
+		id = SRP_call_to_the_jan_mayen
+		icon = GFX_goal_unknown
+		x = 7
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = SRP_the_winter_of_our_discontent  }
+	}
+
+	#Erik's Legacy
+	focus = {
+		id = SRP_erikslegacy
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SRP_formthebuccaneers  }
+	}
+
+	#Plan for the Grand Armada
+	focus = {
+		id = SRP_plan_for_the_grand_armada
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = SRP_erikslegacy  }
+	}
+
+	#The Red Cutlass
+	focus = {
+		id = SRP_the_red_cutlass
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = SRP_plan_for_the_grand_armada  }
+	}
+
+	#The Summer Palace
+	focus = {
+		id = SRP_the_summer_palace
+		icon = GFX_goal_unknown
+		x = 20
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#A Tourist Trap
+	focus = {
+		id = SRP_a_tourist_trap
+		icon = GFX_goal_unknown
+		x = 19
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_the_summer_palace  }
+		mutually_exclusive = { focus = SRP_international_tax_haven  }
+	}
+
+	#Open Gift Shops
+	focus = {
+		id = SRP_open_gift_shops
+		icon = GFX_goal_unknown
+		x = 19
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_a_tourist_trap  }
+	}
+
+	#Hotels on the Seafront
+	focus = {
+		id = SRP_hotels_on_the_seafront
+		icon = GFX_goal_unknown
+		x = 19
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_open_gift_shops  }
+	}
+
+	#Black Gold
+	focus = {
+		id = SRP_black_gold
+		icon = GFX_goal_unknown
+		x = 21
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_international_tax_haven  }
+	}
+
+	#Invite Investors
+	focus = {
+		id = SRP_invite_investors
+		icon = GFX_goal_unknown
+		x = 21
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_black_gold  }
+	}
+
+	#Invite Super Villains
+	focus = {
+		id = SRP_invite_super_villains
+		icon = GFX_goal_unknown
+		x = 21
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_invite_investors  } prerequisite = { focus = SRP_idrinkthereforeiam  focus = SRP_hotels_on_the_seafront  } prerequisite = { focus = SRP_idrinkthereforeiam  }
+	}
+
+	#Outdrink philosphers
+	focus = {
+		id = SRP_outdrink_philosphers
+		icon = GFX_goal_unknown
+		x = 23
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SRP_the_summer_palace  }
+	}
+
+	#Steal Treasure maps
+	focus = {
+		id = SRP_steal_treasure_maps
+		icon = GFX_goal_unknown
+		x = 23
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SRP_outdrink_philosphers  }
+	}
+
+	#I drink therefore I am!
+	focus = {
+		id = SRP_idrinkthereforeiam
+		icon = GFX_goal_unknown
+		x = 23
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SRP_steal_treasure_maps  }
+	}
+
+	#Capitalize on Summer
+	focus = {
+		id = SRP_capitalize_on_summer
+		icon = GFX_goal_unknown
+		x = 25
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_the_summer_palace  }
+	}
+
+	#Capitalize on Summer II
+	focus = {
+		id = SRP_capitalize_on_summer_ii
+		icon = GFX_goal_unknown
+		x = 25
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_capitalize_on_summer  }
+	}
+
+	#Capitalize on Summer III
+	focus = {
+		id = SRP_capitalize_on_summer_iii
+		icon = GFX_goal_unknown
+		x = 25
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_capitalize_on_summer_ii  }
+	}
+
+	#Vacation in full production
+	focus = {
+		id = SRP_vacation_in_full_production
+		icon = GFX_goal_unknown
+		x = 25
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SRP_capitalize_on_summer_iii  }
+	}
+
+}

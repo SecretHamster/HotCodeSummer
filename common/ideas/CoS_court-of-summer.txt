@@ -1,0 +1,55 @@
+ideas = {
+	country = {
+
+		CoS_court_of_summer = {
+			picture = CoS_court_of_summer-1081
+			visible = {
+				yes
+			}
+			modifier = {
+				stability_factor = 0.15
+
+
+			}
+		}
+
+		CoS_spring_break = {
+			picture = CoS_spring_break-1084
+			visible = {
+				yes
+			}
+			modifier = {
+				weekly_manpower = 500 
+
+
+			}
+		}
+
+		CoS_the_cigar_exchange = {
+			picture = CoS_the_cigar_exchange-1440
+			visible = {
+				yes
+			}
+			targeted_modifier = {
+				industrial_capacity_factory = 0.5
+
+consumer_goods_factor = -0.5
+
+
+			}
+		}
+
+		CoS_tricorn_crown = {
+			picture = CoS_tricorn_crown-1044
+			visible = {
+				yes
+			}
+			modifier = {
+				naval_invasion_penalty = 0.5
+army_attack_factor = 0.1
+
+
+			}
+		}
+	}
+}

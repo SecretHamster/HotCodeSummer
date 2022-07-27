@@ -1,0 +1,27 @@
+spriteTypes = { 
+	##Icon For: Court of Summer
+	SpriteType = { 
+		name = "GFX_idea_CoS_court_of_summer-1081"
+		texturefile = "gfx/interface/ideas/court-of-summer-ideas/CoS_court_of_summer-1081.dds"
+	}
+
+	##Icon For: Spring Break
+	SpriteType = { 
+		name = "GFX_idea_CoS_spring_break-1084"
+		texturefile = "gfx/interface/ideas/court-of-summer-ideas/CoS_spring_break-1084.dds"
+	}
+
+	##Icon For: The Cigar Exchange
+	SpriteType = { 
+		name = "GFX_idea_CoS_the_cigar_exchange-1440"
+		texturefile = "gfx/interface/ideas/court-of-summer-ideas/CoS_the_cigar_exchange-1440.dds"
+	}
+
+	##Icon For: Tricorn Crown
+	SpriteType = { 
+		name = "GFX_idea_CoS_tricorn_crown-1044"
+		texturefile = "gfx/interface/ideas/court-of-summer-ideas/CoS_tricorn_crown-1044.dds"
+	}
+
+ 
+ }
