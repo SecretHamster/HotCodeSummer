@@ -20,10 +20,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = SRP_whyistherumgone  }
 		completion_reward = {
-			
-			add_ideas = CoS
 			add_ideas = {
-			    The_Cigar_Exchange
+			    CoS_the_cigar_exchange
 			}
 		}
 	}
@@ -41,7 +39,7 @@ focus_tree = {
 		prerequisite = { focus = SRP_call_the_summer_court  }
 		completion_reward = {
 			add_ideas = {
-			Court_of_Summer
+			CoS_court_of_Summer
 			}
 		}
 	}
@@ -121,7 +119,7 @@ focus_tree = {
 			planning_skill = 3
 			logistics_skill = 3
 			}
-		add_ideas = Tricorn_Crown
+		add_ideas = CoS_tricorn_Crown
 		}	
 	}
 	
@@ -185,10 +183,8 @@ focus_tree = {
 		prerequisite = { focus = SRP_power_to_the_summer_king  }
 		completion_reward = {
 			add_manpower = 100000
-			
-			add_ideas = CoS
 			add_ideas = {
-			Spring_Break
+			CoS_spring_break
 			}
 		}
 	}
@@ -214,7 +210,7 @@ focus_tree = {
 			include_locked = yes
 			}
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
 			type = arms_factory
 			level = 3

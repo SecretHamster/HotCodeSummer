@@ -1,4 +1,5 @@
-SRP_DIV_0_0 = {	name = "Example Division"
+SRP_DIV_0_0 = {	
+	name = "Party Division"
 	for_countries = { SRP }
 	can_use = { always = yes }
 	division_types = { 

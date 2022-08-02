@@ -4,7 +4,7 @@ ideas = {
 		CoS_court_of_summer = {
 			picture = CoS_court_of_summer-1081
 			visible = {
-				Visible
+				always = yes
 			}
 			modifier = {
 				stability_factor = 0.15
@@ -14,10 +14,10 @@ ideas = {
 		CoS_spring_break = {
 			picture = CoS_spring_break-1084
 			visible = {
-				Visible
+				always = yes
 			}
 			modifier = {
-				weekly_manpower = 500 
+				weekly_manpower = 500
 			}
 		}
 
@@ -25,7 +25,7 @@ ideas = {
 			picture = CoS_the_cigar_exchange-1440
 			targeted_modifier = {
 				industrial_capacity_factory = 0.5
-				consumer_goods_factor = -0.5
+				consumer_goods_factor = 0.5
 			}
 		}
 
